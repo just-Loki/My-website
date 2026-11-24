@@ -1,0 +1,204 @@
+
+/* ==============================
+   BLOG PAGE
+============================== */
+
+.blog-hero {
+    min-height: 370px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 8%;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.13), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(34, 211, 238, 0.10), transparent 35%);
+}
+
+.blog-hero-content {
+    max-width: 760px;
+}
+
+.section-label {
+    color: #22d3ee;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.blog-hero h1 {
+    color: #ffffff;
+    font-size: clamp(40px, 6vw, 66px);
+    margin-bottom: 20px;
+}
+
+.blog-hero h1 span,
+.blog-heading h2 span,
+.blog-coming h2 span {
+    background: linear-gradient(90deg, #a855f7, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.blog-hero-content > p:not(.section-label) {
+    color: #b9b9ca;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.blog-hero-btn,
+.blog-contact-btn {
+    display: inline-block;
+    padding: 13px 27px;
+    border-radius: 30px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    background: linear-gradient(90deg, #9333ea, #0891b2);
+    transition: transform 0.3s ease;
+}
+
+.blog-hero-btn:hover,
+.blog-contact-btn:hover {
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   BLOG TOPICS
+============================== */
+
+.blog-topics {
+    padding: 75px 8% 90px;
+}
+
+.blog-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-heading h2 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.blog-heading > p:last-child {
+    max-width: 650px;
+    margin: auto;
+    color: #b7b7c7;
+    line-height: 1.8;
+}
+
+.blog-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+
+/* ==============================
+   BLOG CARDS
+============================== */
+
+.blog-card {
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(
+        145deg,
+        rgba(28, 27, 48, 0.96),
+        rgba(17, 17, 31, 0.98)
+    );
+    border: 1px solid rgba(168, 85, 247, 0.22);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-7px);
+    border-color: #a855f7;
+}
+
+.blog-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    background: rgba(168, 85, 247, 0.15);
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+.blog-category {
+    color: #22d3ee;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.blog-card h3 {
+    color: #ffffff;
+    font-size: 21px;
+    margin-bottom: 14px;
+}
+
+.blog-card > p:not(.blog-category) {
+    min-height: 105px;
+    color: #b7b7c7;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+.blog-status {
+    display: inline-block;
+    padding: 8px 13px;
+    border-radius: 20px;
+    color: #d9c5ff;
+    background: rgba(168, 85, 247, 0.13);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    font-size: 12px;
+}
+
+
+/* ==============================
+   COMING SOON SECTION
+============================== */
+
+.blog-coming {
+    text-align: center;
+    padding: 75px 8%;
+    background: rgba(168, 85, 247, 0.06);
+}
+
+.coming-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    border-radius: 20px;
+    background: rgba(168, 85, 247, 0.15);
+    font-size: 32px;
+}
+
+.blog-coming h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 18px;
+}
+
+.blog-coming > p:not(.section-label) {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    color: #b7b7c7;
+    line-height: 1.8;
+}

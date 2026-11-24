@@ -1,0 +1,626 @@
+
+/* =====================================
+   LOKESH PORTFOLIO - WELCOME PAGE
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #080b16;
+    --primary-color: #8b5cf6;
+    --secondary-color: #06b6d4;
+    --text-color: #ffffff;
+    --muted-color: #a1a1aa;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* BACKGROUND */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+    background:
+        radial-gradient(ellipse at top left, #15102b, transparent 55%),
+        radial-gradient(ellipse at bottom right, #071e2c, transparent 55%),
+        var(--bg-color);
+}
+
+.glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.25;
+    animation: floating 8s ease-in-out infinite alternate;
+}
+
+.glow-one {
+    background: var(--primary-color);
+    top: 10%;
+    left: 10%;
+}
+
+.glow-two {
+    background: var(--secondary-color);
+    bottom: 5%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+.grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(#ffffff08 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+    background-size: 55px 55px;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    width: 100%;
+    padding: 22px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--secondary-color);
+}
+
+.nav-text {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--muted-color);
+}
+
+.skip-link {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    border-bottom: 1px solid var(--secondary-color);
+    padding-bottom: 5px;
+    transition: 0.3s;
+}
+
+.skip-link:hover {
+    color: var(--secondary-color);
+}
+
+/* MAIN LAYOUT */
+
+.welcome-container {
+    max-width: 1300px;
+    min-height: calc(100vh - 80px);
+    margin: auto;
+    padding: 45px 8%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 65px;
+}
+
+/* LEFT CONTENT */
+
+.welcome-content {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: 1s ease;
+}
+
+body.loaded .welcome-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 18px;
+    border: 1px solid #ffffff20;
+    border-radius: 30px;
+    background: #ffffff08;
+    color: #c4b5fd;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 12px #22c55e;
+}
+
+.greeting {
+    font-size: 17px;
+    letter-spacing: 5px;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+h1 {
+    font-size: clamp(65px, 8vw, 100px);
+    font-weight: 900;
+    letter-spacing: -5px;
+    line-height: 1.1;
+}
+
+.name-dot {
+    color: var(--primary-color);
+}
+
+.welcome-content h2 {
+    font-size: clamp(17px, 2vw, 21px);
+    font-weight: 500;
+    color: #d4d4d8;
+    margin-top: 20px;
+    line-height: 1.6;
+}
+
+.welcome-content h2 span {
+    color: var(--secondary-color);
+}
+
+.description {
+    max-width: 550px;
+    font-size: 15px;
+    color: var(--muted-color);
+    line-height: 1.9;
+    margin-top: 22px;
+}
+
+/* SKILLS */
+
+.skill-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.skill-tags span {
+    font-size: 12px;
+    padding: 9px 15px;
+    border: 1px solid #ffffff20;
+    border-radius: 25px;
+    color: #d4d4d8;
+    background: #ffffff08;
+    transition: 0.3s;
+}
+
+.skill-tags span:hover {
+    border-color: var(--primary-color);
+    color: white;
+    transform: translateY(-4px);
+}
+
+/* BUTTONS */
+
+.button-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 35px;
+}
+
+.primary-btn,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px 23px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.primary-btn {
+    background: linear-gradient(
+        120deg,
+        var(--primary-color),
+        #6366f1
+    );
+    color: white;
+    box-shadow: 0 8px 30px #8b5cf640;
+}
+
+.primary-btn span {
+    font-size: 22px;
+}
+
+.primary-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px #8b5cf670;
+}
+
+.secondary-btn {
+    border: 1px solid #ffffff35;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background: #ffffff15;
+    border-color: var(--secondary-color);
+}
+
+/* RIGHT PROFILE SECTION */
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease 0.3s;
+}
+
+body.loaded .profile-section {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PROFILE CARD */
+
+.profile-card {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+    min-height: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-glow {
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    filter: blur(85px);
+    opacity: 0.35;
+    border-radius: 50%;
+}
+
+.profile-frame {
+    position: relative;
+    z-index: 1;
+    width: 245px;
+    height: 245px;
+    padding: 6px;
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+    box-shadow: 0 15px 50px #8b5cf640;
+    transform: rotate(-3deg);
+    transition: 0.4s ease;
+}
+
+.profile-frame:hover {
+    transform: rotate(0deg) scale(1.04);
+}
+
+.profile-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 20px;
+    background: #171329;
+}
+
+.profile-caption {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-top: 22px;
+}
+
+.profile-caption h3 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.profile-caption p {
+    color: var(--muted-color);
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+/* FLOATING LABELS */
+
+.floating-label {
+    position: absolute;
+    z-index: 3;
+    padding: 12px 17px;
+    background: #171329;
+    border: 1px solid #ffffff25;
+    border-radius: 12px;
+    font-size: 12px;
+    color: white;
+    box-shadow: 0 10px 30px #00000040;
+    animation: floatLabel 4s ease-in-out infinite;
+}
+
+.floating-label span {
+    color: var(--secondary-color);
+    margin-right: 5px;
+}
+
+.label-one {
+    top: 55px;
+    left: -35px;
+}
+
+.label-two {
+    bottom: 75px;
+    right: -35px;
+    animation-delay: 1s;
+}
+
+/* JOURNEY CARD */
+
+.journey-card {
+    position: relative;
+    width: 100%;
+    max-width: 380px;
+    padding: 25px;
+    border: 1px solid #ffffff20;
+    border-radius: 20px;
+    background: linear-gradient(
+        145deg,
+        #ffffff12,
+        #ffffff04
+    );
+    backdrop-filter: blur(15px);
+    box-shadow: 0 20px 50px #00000030;
+}
+
+.card-label {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+}
+
+.journey-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.journey-number {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    border-radius: 12px;
+    background: #8b5cf625;
+    color: #c4b5fd;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.journey-item h4 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.journey-item p {
+    font-size: 11px;
+    color: var(--muted-color);
+}
+
+.journey-line {
+    width: 1px;
+    height: 25px;
+    background: linear-gradient(
+        var(--primary-color),
+        transparent
+    );
+    margin-left: 20px;
+}
+
+/* FOOTER */
+
+.welcome-footer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 55px;
+    color: #71717a;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* ANIMATIONS */
+
+@keyframes floating {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(35px);
+    }
+}
+
+@keyframes floatLabel {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    .welcome-container {
+        grid-template-columns: 1fr;
+        gap: 65px;
+        padding-top: 55px;
+    }
+
+    .welcome-content {
+        text-align: center;
+    }
+
+    .description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .skill-tags,
+    .button-group {
+        justify-content: center;
+    }
+
+    .profile-section {
+        width: 100%;
+    }
+
+    .welcome-footer {
+        justify-content: center;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        padding: 20px 6%;
+    }
+
+    .nav-text {
+        display: none;
+    }
+
+    .welcome-container {
+        padding: 40px 6%;
+    }
+
+    h1 {
+        font-size: 65px;
+        letter-spacing: -3px;
+    }
+
+    .greeting {
+        font-size: 14px;
+    }
+
+    .welcome-content h2 {
+        font-size: 17px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .button-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .profile-frame {
+        width: 215px;
+        height: 215px;
+    }
+
+    .profile-card {
+        min-height: 280px;
+    }
+
+    .label-one {
+        left: -5px;
+    }
+
+    .label-two {
+        right: -5px;
+    }
+
+    .journey-card {
+        padding: 22px 18px;
+    }
+
+    .welcome-footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .welcome-content,
+    .profile-section {
+        opacity: 1;
+        transform: none;
+    }
+}

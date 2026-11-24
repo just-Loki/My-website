@@ -1,0 +1,817 @@
+
+/* =================================
+   TABLET RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 60px 6%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .image-frame img {
+        width: 270px;
+        height: 340px;
+    }
+
+}
+
+
+/* =================================
+   SMALL LAPTOP DESIGN
+================================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .image-frame img {
+        width: 240px;
+        height: 310px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE NAVIGATION
+================================= */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        min-height: 70px;
+        padding: 15px 6%;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+
+    /* Mobile Hero */
+
+    .hero {
+        min-height: auto;
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 7%;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    /* Mobile Profile Photo */
+
+    .image-frame img {
+        width: 230px;
+        height: 280px;
+    }
+
+    .floating-card {
+        left: -10px;
+        bottom: 15px;
+        font-size: 12px;
+    }
+
+
+    /* Mobile About */
+
+    .about-preview {
+        padding: 60px 7%;
+    }
+
+    .about-preview h2,
+    .projects-preview h2 {
+        font-size: 28px;
+    }
+
+
+    /* Mobile Cards */
+
+    .highlights {
+        padding: 50px 7%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .highlight-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .projects-preview {
+        padding: 60px 7%;
+    }
+
+    .project-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+}
+
+
+/* =================================
+   EXTRA SMALL MOBILE
+================================= */
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+    }
+
+    .image-frame img {
+        width: 200px;
+        height: 250px;
+    }
+
+    .btn {
+        padding: 12px 16px;
+        font-size: 13px;
+    }
+
+    .about-preview h2,
+    .projects-preview h2 {
+        font-size: 25px;
+    }
+
+}
+
+
+/* =================================
+   ACCESSIBILITY
+================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+
+/* ABOUT PAGE RESPONSIVE STYLES */
+
+@media (max-width: 900px) {
+
+    .about-introduction {
+        gap: 40px;
+    }
+
+    .about-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+
+    .about-header {
+        padding: 18px 6%;
+    }
+
+    .about-menu-toggle {
+        display: block;
+    }
+
+    .about-nav {
+        flex-wrap: wrap;
+    }
+
+    .about-nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 25px 0 10px;
+    }
+
+    .about-nav-links.open {
+        display: flex;
+    }
+
+    .about-introduction {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin-bottom: 65px;
+    }
+
+    .about-image-container {
+        max-width: 270px;
+    }
+
+    .about-intro-content {
+        text-align: center;
+    }
+
+    .about-hero {
+        padding-top: 60px;
+    }
+
+    .about-info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 22px;
+    }
+
+    .about-timeline {
+        padding-left: 22px;
+    }
+
+    .timeline-card::before {
+        left: -31px;
+    }
+
+    .about-objective {
+        margin: 45px 18px;
+        padding: 45px 20px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .about-intro-content h2 {
+        font-size: 29px;
+    }
+
+    .about-section-heading h2 {
+        font-size: 29px;
+    }
+
+    .about-objective h2 {
+        font-size: 25px;
+    }
+}
+
+
+
+
+/* ===================================
+   SKILLS PAGE RESPONSIVE DESIGN
+=================================== */
+
+
+/* TABLETS AND SMALL LAPTOPS */
+
+@media (max-width: 1024px) {
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills-header {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .skills-nav-links {
+        gap: 18px;
+    }
+
+}
+
+
+/* TABLETS AND MOBILE */
+
+@media (max-width: 700px) {
+
+    /* HEADER */
+
+    .skills-header {
+        padding: 18px 6%;
+    }
+
+    .skills-menu-toggle {
+        display: block;
+    }
+
+    .skills-nav {
+        flex-wrap: wrap;
+    }
+
+
+    /* MOBILE MENU */
+
+    .skills-nav-links {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding: 25px 0 10px;
+    }
+
+    .skills-nav-links.open {
+        display: flex;
+    }
+
+
+    /* HERO */
+
+    .skills-hero {
+        padding: 65px 20px 45px;
+    }
+
+
+    /* INTRODUCTION */
+
+    .skills-intro {
+        margin-bottom: 40px;
+    }
+
+
+    /* SKILL SECTIONS */
+
+    .skills-section {
+        padding: 40px 20px;
+    }
+
+    .skills-section-heading h2 {
+        font-size: 28px;
+    }
+
+
+    /* SKILL CARDS */
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .skill-card {
+        min-height: auto;
+        padding: 25px;
+    }
+
+
+    /* CLOSING SECTION */
+
+    .skills-closing {
+        margin: 40px 18px 55px;
+        padding: 45px 20px;
+    }
+
+    .skills-closing h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* SMALL MOBILE DEVICES */
+
+@media (max-width: 400px) {
+
+    .skills-hero h1 {
+        font-size: 36px;
+    }
+
+    .skills-intro h2 {
+        font-size: 25px;
+    }
+
+    .skills-section-heading h2 {
+        font-size: 25px;
+    }
+
+    .skills-closing h2 {
+        font-size: 23px;
+    }
+
+    .skill-card {
+        padding: 22px;
+    }
+
+}
+
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .skill-card,
+    .skills-button {
+        transition: none;
+    }
+
+    .skill-card:hover,
+    .skills-button:hover {
+        transform: none;
+    }
+
+}
+
+
+
+
+/* ==============================
+   PROJECTS PAGE RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+    .project-description {
+        min-height: auto;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .projects-hero {
+        min-height: 280px;
+        padding: 65px 6%;
+    }
+
+    .projects-section {
+        padding: 55px 6%;
+    }
+
+    .projects-heading h2 {
+        font-size: 32px;
+    }
+
+    .project-card {
+        padding: 28px 23px;
+    }
+
+    .project-content h3 {
+        font-size: 21px;
+    }
+
+    .projects-closing {
+        padding: 55px 6%;
+    }
+
+    .projects-closing h2 {
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .technology-list {
+        gap: 7px;
+    }
+
+    .technology-list span {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+    .project-card {
+        padding: 24px 18px;
+    }
+
+}
+
+
+
+
+/* ==============================
+   EXPERIENCE PAGE RESPONSIVE
+============================== */
+
+@media (max-width: 700px) {
+
+    .experience-hero {
+        min-height: 270px;
+        padding: 60px 6%;
+    }
+
+    .experience-section {
+        padding: 55px 6%;
+    }
+
+    .experience-heading h2 {
+        font-size: 29px;
+    }
+
+    .experience-timeline {
+        padding-left: 18px;
+    }
+
+    .experience-card {
+        padding-left: 20px;
+    }
+
+    .date-dot {
+        left: -27px;
+    }
+
+    .experience-details {
+        padding: 25px 20px;
+    }
+
+    .experience-top h3 {
+        font-size: 23px;
+    }
+
+    .experience-top h4 {
+        font-size: 17px;
+    }
+
+    .company-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 22px;
+    }
+
+    .experience-growth {
+        padding: 55px 6%;
+    }
+
+    .experience-growth h2 {
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .experience-top {
+        gap: 10px;
+    }
+
+    .experience-details {
+        padding: 22px 16px;
+    }
+
+    .experience-tags {
+        gap: 7px;
+    }
+
+    .experience-tags span {
+        font-size: 11px;
+        padding: 7px 10px;
+    }
+
+}
+
+
+
+
+
+/* ==============================
+   CONTACT PAGE RESPONSIVE
+============================== */
+
+@media (max-width: 900px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .contact-hero {
+        min-height: 260px;
+        padding: 55px 6%;
+    }
+
+    .contact-section {
+        padding: 55px 6% 70px;
+    }
+
+    .contact-heading h2 {
+        font-size: 29px;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 27px 22px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 22px 17px;
+    }
+
+    .contact-item {
+        gap: 12px;
+    }
+
+}
+
+
+
+
+/* ==============================
+   BLOG PAGE RESPONSIVE
+============================== */
+
+@media (max-width: 1000px) {
+
+    .blog-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .blog-hero {
+        min-height: 290px;
+        padding: 60px 6%;
+    }
+
+    .blog-topics {
+        padding: 55px 6%;
+    }
+
+    .blog-heading h2 {
+        font-size: 29px;
+    }
+
+    .blog-grid {
+        grid-template-columns: 1fr;
+        max-width: 550px;
+    }
+
+    .blog-card {
+        padding: 25px;
+    }
+
+    .blog-card > p:not(.blog-category) {
+        min-height: auto;
+    }
+
+    .blog-coming {
+        padding: 55px 6%;
+    }
+
+    .blog-coming h2 {
+        font-size: 27px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .blog-card {
+        padding: 22px 18px;
+    }
+
+    .blog-status {
+        font-size: 11px;
+    }
+
+}
+
+
+
+
+/* ==============================
+   404 PAGE RESPONSIVE
+============================== */
+
+@media (max-width: 700px) {
+
+    .error-page {
+        min-height: 70vh;
+        padding: 55px 6%;
+    }
+
+    .error-number {
+        letter-spacing: 3px;
+    }
+
+    .error-content h1 {
+        font-size: 30px;
+    }
+
+    .error-description {
+        font-size: 14px;
+    }
+
+    .error-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .error-home-btn,
+    .error-contact-btn {
+        width: 200px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .error-number {
+        font-size: 95px;
+    }
+
+    .error-content h1 {
+        font-size: 26px;
+    }
+
+}
